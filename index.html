@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan — Alma & Vonny</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="lagu.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- TOMBOL MUSIK -->
+  <button id="musicBtn" class="music-btn" aria-label="Toggle musik">
+    <span id="musicIcon">🔇</span>
+  </button>
+
+  <!-- FLOATING NAV -->
+  <nav id="floatNav" class="float-nav hidden">
+    <a href="#couple">💑 Mempelai</a>
+    <a href="#countdown">⏳ Hitung Hari</a>
+    <a href="#savedate">📅 Tanggal</a>
+    <a href="#events">🎉 Acara</a>
+    <a href="#story">💕 Kisah</a>
+    <a href="#gallery">📸 Galeri</a>
+    <a href="#rsvp">💌 RSVP</a>
+    <a href="#doa">🕌 Doa</a>
+    <a href="#info">ℹ️ Info</a>
+    <a href="#share">📤 Share</a>
+    <a href="#gift">🎁 Hadiah</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <p class="subtitle">The Wedding Of</p>
+      <h1 class="names">Alma <span>&</span> Vonny</h1>
+      <p class="date">12 Desember 2026</p>
+      <div class="hero-ornament">❦</div>
+      <button id="openInvite" class="btn btn-glow">Buka Undangan</button>
+      <p class="tap-hint">✦ ketuk di mana saja untuk memulai ✦</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent" class="hidden">
+
+    <!-- QUOTE -->
+    <section class="section quote reveal">
+      <div class="ornament-top">❦</div>
+      <p class="quote-text">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu dapat ketenangan hati dan menjadikan kasih sayang di antara kamu."</p>
+      <span class="quote-source">— QS. Ar-Rum: 21</span>
+    </section>
+
+    <!-- PASANGAN -->
+    <section class="section couple reveal" id="couple">
+      <h2>Mempelai</h2>
+      <div class="couple-grid">
+        <div class="person">
+          <div class="photo-ring">
+            <img class="photo" src="img/mempelai1.png" alt="Alma Rosyil Khilaq" loading="lazy" />
+          </div>
+          <h3>Alma Rosyil Khilaq</h3>
+          <p class="desc">Putra Bapak Deden &amp; Ibu Eris</p>
+        </div>
+        <div class="amp">&amp;</div>
+        <div class="person">
+          <div class="photo-ring">
+            <img class="photo" src="img/mempelai2.png" alt="Vonny Aulia Putri" loading="lazy" />
+          </div>
+          <h3>Vonny Aulia Putri</h3>
+          <p class="desc">Putri Bapak Rahmat &amp; Ibu Arie</p>
+        </div>
+      </div>
+      <p class="couple-note">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan resepsi pernikahan putra-putri kami.</p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-section reveal" id="countdown">
+      <h2>Menuju Hari Bahagia</h2>
+      <div id="countdownBox" class="countdown">
+        <div class="cd-box"><span id="days">0</span><small>Hari</small></div>
+        <div class="cd-box"><span id="hours">0</span><small>Jam</small></div>
+        <div class="cd-box"><span id="minutes">0</span><small>Menit</small></div>
+        <div class="cd-box"><span id="seconds">0</span><small>Detik</small></div>
+      </div>
+    </section>
+
+    <!-- SAVE THE DATE -->
+    <section class="section savedate reveal" id="savedate">
+      <h2>Save The Date</h2>
+      <div class="savedate-card">
+        <p class="sd-day">Sabtu</p>
+        <p class="sd-date">12</p>
+        <p class="sd-month">Desember 2026</p>
+        <div class="sd-divider"></div>
+        <p class="sd-time">09.00 WIB — Selesai</p>
+        <div class="sd-buttons">
+          <a class="btn btn-small" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Alma+%26+Vonny&dates=20261212T020000Z/20261212T070000Z&details=Akad+Nikah+%26+Resepsi&location=Gedung+Serbaguna+Dago%2C+Bandung" target="_blank" rel="noopener">
+            📅 Simpan ke Kalender
+          </a>
+          <a class="btn btn-small btn-outline" href="https://maps.google.com/?q=Dago+Bandung" target="_blank" rel="noopener">
+            📍 Petunjuk Arah
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACARA -->
+    <section class="section events reveal" id="events">
+      <h2>Rangkaian Acara</h2>
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="event-icon">💍</div>
+          <h3>Akad Nikah</h3>
+          <p class="time">Sabtu, 12 Des 2026<br>09.00 WIB</p>
+          <p class="place">Kediaman Mempelai Pria<br>Jl. Baleendah No. 88, Bandung</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🎉</div>
+          <h3>Resepsi</h3>
+          <p class="time">Sabtu, 12 Des 2026<br>11.00 – 14.00 WIB</p>
+          <p class="place">Gedung Serbaguna Dago<br>Jl. Dago No. 25, Bandung</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOKASI / MAPS -->
+    <section class="section location reveal" id="location">
+      <h2>Lokasi Acara</h2>
+      <p class="loc-desc">Gedung Serbaguna Dago<br>Jl. Dago No. 25, Bandung, Jawa Barat</p>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=Dago+Bandung&output=embed"
+          width="100%" height="340" style="border:0; border-radius:18px;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <a class="btn btn-outline" href="https://maps.google.com/?q=Dago+Bandung" target="_blank">📍 Buka di Google Maps</a>
+    </section>
+
+    <!-- LOVE STORY -->
+    <section class="section story reveal" id="story">
+      <h2>Kisah Kami</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-year">2023</p>
+            <h3>Ketemu di Mobile Legends 🎮</h3>
+            <p>Berawal dari mabar (main bareng) di Mobile Legends, Alma dan Vonny jadi sering satu tim. Dari sekadar "coba invite", ternyata jodoh juga bisa didapat di Land of Dawn. 😂</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-year">2024</p>
+            <h3>Dari Mabar ke Serius</h3>
+            <p>Setelah 2 tahun mabar tiap malam, obrolan mulai keluar dari topik hero dan rank. Ternyata rasa nyaman itu tumbuh perlahan, dan kami memutuskan untuk menjalin hubungan yang lebih serius.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-year">2027</p>
+            <h3>Lamaran</h3>
+            <p>Di bawah langit senja Bandung, Alma melamar Vonny dengan penuh cinta dan restu keluarga. Bukan di dalam game lagi, tapi di dunia nyata. 💙</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-year">2028</p>
+            <h3>Menikah</h3>
+            <p>Dengan doa dan restu semua, kami memulai babak baru sebagai suami istri. Dari party ML sampai pelaminan — Alhamdulillah. 🤍</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="section gallery reveal" id="gallery">
+      <h2>Momen Bahagia</h2>
+      <div class="gallery-grid">
+        <img class="gallery-item" src="img/bahagia1.png" alt="Momen Alma & Vonny 1" loading="lazy" />
+        <img class="gallery-item" src="img/bahagia2.png" alt="Momen Alma & Vonny 2" loading="lazy" />
+        <img class="gallery-item" src="img/bahagia3.png" alt="Momen Alma & Vonny 3" loading="lazy" />
+        <img class="gallery-item" src="img/bahagia4.png" alt="Momen Alma & Vonny 4" loading="lazy" />
+        <img class="gallery-item" src="img/bahagia1.png" alt="Momen Alma & Vonny 5" loading="lazy" />
+        <img class="gallery-item" src="img/bahagia2.png" alt="Momen Alma & Vonny 6" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- DRESS CODE -->
+    <section class="section dresscode reveal" id="dresscode">
+      <h2>Dress Code</h2>
+      <p class="dress-desc">Kami akan senang jika Anda hadir dengan nuansa warna:</p>
+      <div class="color-swatches">
+        <div class="swatch" style="background:#dceefb"><span>Soft Blue</span></div>
+        <div class="swatch" style="background:#a7d3f0"><span>Sky Blue</span></div>
+        <div class="swatch" style="background:#6bb6e8"><span>Ocean Blue</span></div>
+        <div class="swatch" style="background:#f9fcff; border:1px solid #ddd"><span>Ivory</span></div>
+      </div>
+      <p class="dress-note">✨ Terima kasih telah menyatu dengan tema kami ✨</p>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section rsvp reveal" id="rsvp">
+      <h2>Konfirmasi Kehadiran</h2>
+      <p class="rsvp-desc">Kehadiran Anda sangat berarti bagi kami 💙</p>
+      <form id="rsvpForm">
+        <input type="text" id="name" placeholder="Nama Anda" required />
+        <input type="number" id="guestCount" placeholder="Jumlah tamu (termasuk Anda)" min="1" value="1" required />
+        <select id="attendance" required>
+          <option value="">Konfirmasi kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+        <textarea id="message" placeholder="Ucapan & doa (opsional)"></textarea>
+        <button type="submit" class="btn">Kirim Ucapan</button>
+      </form>
+      <p id="rsvpStatus"></p>
+
+      <!-- GUEST BOOK -->
+      <div class="guestbook">
+        <h3>💌 Ucapan dari Tamu</h3>
+        <div id="wishList" class="wish-list">
+          <p class="empty">Jadilah yang pertama memberi ucapan 💙</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOA & HARAPAN -->
+    <section class="section doa reveal" id="doa">
+      <h2>Doa &amp; Harapan</h2>
+      <div class="doa-card">
+        <div class="doa-ornament">🕌</div>
+        <p class="doa-arab">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+        <p class="doa-latin">"Barakallahu laka wa baraka 'alaika wa jama'a bainakuma fii khair"</p>
+        <p class="doa-arti">"Semoga Allah memberkahi kamu, dan memberkahi atasmu, serta mengumpulkan kalian berdua dalam kebaikan."</p>
+        <p class="doa-source">— HR. Abu Dawud</p>
+      </div>
+      <p class="doa-hint">Doakan kami agar menjadi keluarga yang sakinah, mawaddah, warahmah 🤍</p>
+    </section>
+
+    <!-- INFO TAMU -->
+    <section class="section info reveal" id="info">
+      <h2>Info untuk Tamu</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">🅿️</div>
+          <h3>Parkir</h3>
+          <p>Tersedia area parkir gratis di gedung, kapasitas ±100 mobil.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🕐</div>
+          <h3>Waktu Terbaik</h3>
+          <p>Disarankan datang 15 menit sebelum acara dimulai.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">👶</div>
+          <h3>Anak &amp; Keluarga</h3>
+          <p>Anak-anak sangat welcome! Kami sediakan area khusus.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📸</div>
+          <h3>Dokumentasi</h3>
+          <p>Silakan foto &amp; share. Tag IG kami ya!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHARE -->
+    <section class="section share reveal" id="share">
+      <h2>Ajak Teman</h2>
+      <p class="share-desc">Bantu sebarkan kabar bahagia ini ke teman-teman Anda 💙</p>
+      <div class="share-buttons">
+        <button class="share-btn share-wa" data-share="whatsapp">
+          <span>💬</span> WhatsApp
+        </button>
+        <button class="share-btn share-copy" data-share="copy">
+          <span>🔗</span> Salin Link
+        </button>
+        <button class="share-btn share-tg" data-share="telegram">
+          <span>✈️</span> Telegram
+        </button>
+      </div>
+      <p class="share-status" id="shareStatus"></p>
+    </section>
+
+    <!-- GIFT -->
+    <section class="section gift reveal" id="gift">
+      <h2>Amplop Digital</h2>
+      <p class="gift-desc">Doa &amp; restu Anda adalah hadiah terindah. Namun jika ingin memberi tanda kasih, kami sediakan:</p>
+      <div class="bank-grid">
+        <div class="bank-card">
+          <p class="bank-name">🏦 Bank BCA</p>
+          <p class="bank-number">1234567890</p>
+          <p class="bank-owner">a.n. Alma Rosyil Khilaq</p>
+          <button class="btn btn-small copy" data-copy="1234567890">Salin</button>
+        </div>
+        <div class="bank-card">
+          <p class="bank-name">🏦 Bank Mandiri</p>
+          <p class="bank-number">9876543210</p>
+          <p class="bank-owner">a.n. Vonny Aulia</p>
+          <button class="btn btn-small copy" data-copy="9876543210">Salin</button>
+        </div>
+      </div>
+      <div class="qr-wrap">
+        <p class="qr-label">📱 Scan QR untuk transfer cepat</p>
+        <img class="qr-img"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=1234567890&color=3d8dc4&bgcolor=dceefb"
+             alt="QR Code Nomor Rekening"
+             loading="lazy" />
+        <p class="qr-note">BCA · 1234567890 · a.n. Alma Rosyil Khilaq</p>
+      </div>
+      <p class="gift-hint">🎁 Atau kirim hadiah fisik ke:<br>Jl. Cihampelas No. 88, Bandung (a.n. Vonny)</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq reveal" id="faq">
+      <h2>Pertanyaan Umum</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Apakah boleh membawa anak? <span>+</span></button>
+          <div class="faq-a"><p>Tentu boleh! Kami senang jika anak Anda ikut meramaikan acara.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Apakah ada parkir? <span>+</span></button>
+          <div class="faq-a"><p>Ya, tersedia area parkir gratis di gedung dengan kapasitas ± 100 mobil.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Jam berapa sebaiknya datang? <span>+</span></button>
+          <div class="faq-a"><p>Resepsi dimulai pukul 11.00 WIB. Disarankan datang 15 menit lebih awal.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Apakah ada protokol kesehatan? <span>+</span></button>
+          <div class="faq-a"><p>Tidak ada protokol khusus, namun kami sarankan tetap menjaga kebersihan.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENUTUP -->
+    <section class="section closing reveal" id="closing">
+      <div class="closing-card">
+        <div class="closing-ornament">❦</div>
+        <h2>Terima Kasih</h2>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+        <p class="closing-wassalam">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="closing-from">Kami yang berbahagia,</p>
+        <p class="closing-names">Alma &amp; Vonny</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-ornament">❦</div>
+      <p class="thanks">Terima kasih atas doa &amp; restunya 🙏</p>
+      <p class="small">Alma &amp; Vonny — 12.12.2026</p>
+      <p class="credit">Made with 💙 by Alma &amp; Vonny</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
