@@ -946,3 +946,466 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
   .float-nav a { font-size: 0.85rem; padding: 8px 16px; }
   .info-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============================================
+   MOBILE RESPONSIVE FIX
+   ============================================ */
+
+/* --- 1. HERO: fix 100vh di HP (address bar) --- */
+@media (max-width: 480px) {
+  .hero {
+    height: 100svh;           /* small viewport height — fix address bar HP */
+    min-height: 100vh;
+    padding: 0 10px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+  }
+  .hero h1 span {
+    margin: 0 4px;
+  }
+  .subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+  }
+  .date {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+  }
+  .hero-ornament {
+    font-size: 1.5rem;
+    margin: 8px 0 18px;
+  }
+  .tap-hint {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- 2. FLOATING NAV: bisa scroll horizontal, tidak kepotong --- */
+@media (max-width: 768px) {
+  .float-nav {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    transform: none;
+    max-width: none;
+    padding: 6px 8px;
+    gap: 2px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .float-nav a {
+    font-size: 0.72rem;
+    padding: 6px 10px;
+  }
+}
+
+/* --- 3. SECTION: padding lebih kecil di HP --- */
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 16px;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+  }
+  .quote {
+    padding: 60px 18px;
+  }
+  .quote-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .countdown-section {
+    padding: 60px 16px;
+  }
+}
+
+/* --- 4. COUPLE: foto menyesuaikan lebar layar --- */
+@media (max-width: 480px) {
+  .couple-grid {
+    gap: 14px;
+  }
+  .person {
+    flex: 1 1 130px;
+    max-width: 150px;
+  }
+  .photo-ring {
+    width: 130px;
+    height: 130px;
+    padding: 4px;
+    margin-bottom: 12px;
+  }
+  .person h3 {
+    font-size: 1.05rem;
+  }
+  .person .desc {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+  .amp {
+    font-size: 2.2rem;
+  }
+  .couple-note {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    padding: 0 10px;
+  }
+}
+
+/* --- 5. COUNTDOWN: box lebih kecil, 2x2 grid di HP sempit --- */
+@media (max-width: 480px) {
+  .countdown {
+    gap: 10px;
+  }
+  .cd-box {
+    padding: 14px 12px;
+    min-width: 68px;
+    border-radius: 12px;
+  }
+  .cd-box span {
+    font-size: 1.6rem;
+  }
+  .cd-box small {
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+}
+
+/* HP sangat sempit (<360px) — countdown 2x2 */
+@media (max-width: 360px) {
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+/* --- 6. SAVE THE DATE card --- */
+@media (max-width: 480px) {
+  .savedate-card {
+    padding: 32px 20px;
+    margin: 0 6px;
+  }
+  .sd-date {
+    font-size: 4rem;
+  }
+  .sd-day {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+  }
+  .sd-month {
+    font-size: 0.95rem;
+  }
+  .sd-time {
+    font-size: 0.9rem;
+  }
+  .sd-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sd-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- 7. EVENTS: card full width di HP --- */
+@media (max-width: 640px) {
+  .event-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .event-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 25px 18px;
+  }
+  .event-icon {
+    font-size: 2rem;
+  }
+  .event-card h3 {
+    font-size: 1.15rem;
+  }
+  .event-card .time {
+    font-size: 0.95rem;
+  }
+  .event-card .place {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- 8. MAPS: kurangi tinggi di HP --- */
+@media (max-width: 480px) {
+  .map-wrap iframe {
+    height: 240px !important;
+  }
+  .location .loc-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- 9. STORY TIMELINE: padding kiri dikurangi --- */
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 30px;
+  }
+  .timeline::before {
+    left: 10px;
+  }
+  .tl-dot {
+    left: -28px;
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+  }
+  .tl-content {
+    padding: 16px 18px;
+  }
+  .tl-year {
+    font-size: 1rem;
+  }
+  .tl-content h3 {
+    font-size: 1.02rem;
+  }
+  .tl-content p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- 10. GALLERY: gap lebih kecil di HP --- */
+@media (max-width: 480px) {
+  .gallery-grid {
+    gap: 10px;
+  }
+  .gallery-item {
+    border-radius: 12px;
+  }
+}
+
+/* --- 11. DRESS CODE: swatch lebih kecil --- */
+@media (max-width: 480px) {
+  .swatch {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    padding: 5px;
+  }
+  .swatch span {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+  .dress-desc {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+  .color-swatches {
+    gap: 10px;
+  }
+}
+
+/* --- 12. RSVP form --- */
+@media (max-width: 480px) {
+  #rsvpForm {
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  #rsvpForm input,
+  #rsvpForm select,
+  #rsvpForm textarea {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+  .rsvp-desc {
+    font-size: 0.88rem;
+  }
+  .guestbook {
+    padding: 0 4px;
+  }
+  .wish-card {
+    padding: 14px 16px;
+  }
+  .wish-card .wish-name {
+    font-size: 0.88rem;
+  }
+  .wish-card .wish-msg {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- 13. DOA card --- */
+@media (max-width: 480px) {
+  .doa-card {
+    padding: 28px 18px;
+    margin: 0 6px;
+  }
+  .doa-arab {
+    font-size: 1.25rem;
+    line-height: 1.9;
+  }
+  .doa-latin {
+    font-size: 0.85rem;
+  }
+  .doa-arti {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+  .doa-hint {
+    font-size: 0.85rem;
+    padding: 0 10px;
+  }
+}
+
+/* --- 14. INFO grid — 1 kolom di HP --- */
+@media (max-width: 640px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 4px;
+  }
+  .info-card {
+    padding: 22px 18px;
+  }
+  .info-icon {
+    font-size: 1.6rem;
+  }
+  .info-card h3 {
+    font-size: 1rem;
+  }
+  .info-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- 15. SHARE buttons — full width di HP --- */
+@media (max-width: 480px) {
+  .share-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .share-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+  }
+  .share-desc {
+    font-size: 0.88rem;
+    padding: 0 10px;
+  }
+}
+
+/* --- 16. GIFT bank cards --- */
+@media (max-width: 480px) {
+  .gift .bank-grid {
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 6px;
+  }
+  .gift .bank-card {
+    max-width: 100%;
+    padding: 25px 18px;
+  }
+  .bank-number {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  .qr-wrap {
+    max-width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 15px;
+  }
+  .qr-img {
+    max-width: 180px;
+  }
+  .gift-hint {
+    font-size: 0.85rem;
+    margin: 0 8px;
+    padding: 15px 18px;
+  }
+}
+
+/* --- 17. FAQ --- */
+@media (max-width: 480px) {
+  .faq-q {
+    padding: 15px 16px;
+    font-size: 0.92rem;
+  }
+  .faq-item.open .faq-a {
+    padding: 0 16px 16px;
+  }
+  .faq-a p {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- 18. CLOSING card --- */
+@media (max-width: 480px) {
+  .closing-card {
+    padding: 32px 20px;
+    margin: 0 6px;
+  }
+  .closing-card h2 {
+    font-size: 1.5rem;
+  }
+  .closing-card p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+  .closing-names {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* --- 19. FOOTER --- */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 16px;
+  }
+  .thanks {
+    font-size: 0.9rem;
+  }
+  .footer .small {
+    font-size: 0.78rem;
+  }
+  .credit {
+    font-size: 0.7rem;
+  }
+}
+
+/* --- 20. MUSIC BTN: agak kecil di HP --- */
+@media (max-width: 480px) {
+  .music-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* --- 21. PREVENT TEXT OVERFLOW di semua layar --- */
+.section,
+.hero-content,
+.couple-note,
+.quote-text,
+.tl-content,
+.event-card,
+.bank-card,
+.info-card,
+.doa-card,
+.closing-card {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
